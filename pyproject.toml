@@ -1,0 +1,44 @@
+[project]
+name = "langchain-google-el-carro"
+dynamic = ["version"]
+description = "LangChain integrations for Google El Carro Oracle"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+dependencies = [
+    "langchain-core>=0.1.1, <1.0.0",
+    "SQLAlchemy>=2.0.25, <3.0.0",
+    "oracledb>=2.0.1, <3.0.0",
+    "langchain-community>=0.0.18, <1.0.0"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "langchain_google_el_carro.version.__version__"}
+
+[project.urls]
+Homepage = "https://github.com/googleapis/langchain-google-el-carro-python"
+Repository = "https://github.com/googleapis/langchain-google-el-carro-python.git"
+"Bug Tracker" = "https://github.com/googleapis/langchain-google-el-carro-python/issues"
+Changelog = "https://github.com/googleapis/langchain-google-el-carro-python/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4.4",
+    "black[jupyter]==23.12.0",
+    "isort==5.13.2",
+    "mypy==1.7.1",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = 3.8
+warn_unused_configs = true
