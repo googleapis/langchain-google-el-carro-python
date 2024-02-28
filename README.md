@@ -1,6 +1,6 @@
 # El Carro for Oracle Databases for Langchain
 
-This package contains the [LangChain][langchain] integrations for 
+This package contains the [LangChain][langchain] integrations for
 the [Google El Carro Oracle Operator](https://github.com/GoogleCloudPlatform/elcarro-oracle-operator).
 
 > **🧪 Preview:** This feature is covered by the Pre-GA Offerings Terms of the
@@ -15,17 +15,21 @@ the [Google El Carro Oracle Operator](https://github.com/GoogleCloudPlatform/elc
 
 * The library supports El Carro Operator for Oracle 18c and higher versions.
 * By default the library
-  uses [thin mode](https://python-oracledb.readthedocs.io/en/latest/user_guide/appendix_b.html) for Oracle connectivity,
-  to use thick mode please follow the corresponding [section](#oracle-thick-mode-connectivity).
+  uses [thin mode](https://python-oracledb.readthedocs.io/en/latest/user_guide/appendix_b.html)
+  for Oracle connectivity,
+  to use thick mode please follow the
+  corresponding [section](#oracle-thick-mode-connectivity).
 * To use VARCHAR2 datatype of size more than 4000 please
-  tweak [MAX_STRING_SIZE](https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/MAX_STRING_SIZE.html#GUID-D424D23B-0933-425F-BC69-9C0E6724693C)
+  change the
+  parameter [MAX_STRING_SIZE](https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/MAX_STRING_SIZE.html#GUID-D424D23B-0933-425F-BC69-9C0E6724693C)
   in the Oracle instance.
 
 ## Getting Started
 
 ### Create an El Carro Operator Oracle Instance and a Database (PDB)
 
-In order to use this library, you first need to have an El Carro Operator software running
+In order to use this library, you first need to have an El Carro Operator
+software running
 with an Instance (CDB) and a Database (PDB).
 
 Please follow the steps for El Carro Oracle Operator to provision a new database
@@ -78,7 +82,9 @@ loader = ElCarroLoader(
 docs = loader.lazy_load()
 ```
 
-See the full [Document Loader](https://github.com/googleapis/langchain-google-el-carro-python/tree/main/docs/doc_loader.md) tutorial.
+See the
+full [Document Loader](https://github.com/googleapis/langchain-google-el-carro-python/tree/main/docs/doc_loader.md)
+tutorial.
 
 ## Chat Message History Usage
 
@@ -104,7 +110,9 @@ history = ElCarroChatMessageHistory(
 )
 ```
 
-See the full [Chat Message History](https://github.com/googleapis/langchain-google-el-carro-python/tree/main/docs/chat_message_history.md) tutorial.
+See the
+full [Chat Message History](https://github.com/googleapis/langchain-google-el-carro-python/tree/main/docs/chat_message_history.md)
+tutorial.
 
 ### Oracle Thick Mode Connectivity
 
