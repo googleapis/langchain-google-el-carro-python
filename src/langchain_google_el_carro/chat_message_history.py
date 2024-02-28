@@ -56,7 +56,7 @@ class ElCarroChatMessageHistory(BaseChatMessageHistory):
         self.s_table = meta_data.tables[self.table_name]
 
     @property
-    def messages(self) -> List[BaseMessage]:
+    def messages(self) -> List[BaseMessage]:  # type: ignore
         """Retrieve the messages from database"""
 
         stmt = (

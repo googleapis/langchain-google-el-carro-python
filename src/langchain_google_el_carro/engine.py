@@ -17,6 +17,7 @@ import copy
 from typing import List, Optional
 
 import sqlalchemy
+import sqlalchemy.dialects.oracle
 
 DEFAULT_CONTENT_COL = "page_content"
 DEFAULT_METADATA_COL = "langchain_metadata"
@@ -103,7 +104,7 @@ class ElCarroEngine:
         with self.connect() as conn:
             table_exists = sqlalchemy.inspect(conn).has_table(table_name)
             if not table_exists:
-                columns = [
+                columns: List[sqlalchemy.Column] = [
                     sqlalchemy.Column(
                         "id",
                         sqlalchemy.Integer,

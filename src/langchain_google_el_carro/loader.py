@@ -163,7 +163,7 @@ class ElCarroLoader(BaseLoader):
         content_columns: Iterable[str],
         metadata_columns: Iterable[str],
         row: Dict,
-        metadata_json_column: str = DEFAULT_METADATA_COL,
+        metadata_json_column: Optional[str] = DEFAULT_METADATA_COL,
     ) -> Document:
         page_content = " ".join(
             str(row[column]) for column in content_columns if column in row
