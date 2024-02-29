@@ -32,7 +32,7 @@ class ElCarroChatMessageHistory(BaseChatMessageHistory):
         session_id (str):
             Arbitrary key that is used to store the messages
             of a single chat session.
-        table_name (str):
+        table_name (str): 123
             The name of the table to use for storing/retrieving
             the chat message history.
     """
