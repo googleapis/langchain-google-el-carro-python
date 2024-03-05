@@ -83,7 +83,7 @@ docs = loader.lazy_load()
 ```
 
 See the
-full [Document Loader](https://github.com/googleapis/langchain-google-el-carro-python/tree/main/docs/doc_loader.md)
+full [Document Loader](https://github.com/googleapis/langchain-google-el-carro-python/tree/main/docs/document_loader.ipynb)
 tutorial.
 
 ## Chat Message History Usage
@@ -111,7 +111,7 @@ history = ElCarroChatMessageHistory(
 ```
 
 See the
-full [Chat Message History](https://github.com/googleapis/langchain-google-el-carro-python/tree/main/docs/chat_message_history.md)
+full [Chat Message History](https://github.com/googleapis/langchain-google-el-carro-python/tree/main/docs/chat_message_history.ipynb)
 tutorial.
 
 ### Oracle Thick Mode Connectivity
