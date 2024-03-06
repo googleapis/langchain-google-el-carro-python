@@ -1,4 +1,4 @@
-langchain==0.1.9
+langchain==0.1.11
 langchain-community==0.0.24
 langchain-core==0.1.26
 mypy==1.7.1
