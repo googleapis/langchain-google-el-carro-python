@@ -1,6 +1,6 @@
-langchain==0.1.9
-langchain-community==0.0.24
-langchain-core==0.1.30
-mypy==1.7.1
-oracledb==2.0.1
-sqlalchemy==2.0.25
+langchain==0.1.12
+langchain-community==0.0.28
+langchain-core==0.1.32
+mypy==1.9.0
+oracledb==2.1.0
+sqlalchemy==2.0.28
