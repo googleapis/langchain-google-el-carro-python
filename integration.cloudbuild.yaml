@@ -35,9 +35,9 @@ steps:
       - "DB_PASSWORD=$_DB_PASSWORD"
 
 substitutions:
-  pool:
-    name: "projects/prow-build-graybox/locations/us-central1/workerPools/langchain-el-carro-wp"
   _VERSION: "3.8"
 
 options:
+  pool:
+    name: "projects/prow-build-graybox/locations/us-central1/workerPools/langchain-el-carro-wp"
   dynamicSubstitutions: true
