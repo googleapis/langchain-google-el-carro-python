@@ -14,17 +14,17 @@
 
 steps:
   - id: Install dependencies
-    name: python:3.11
+    name: python:${_VERSION}
     entrypoint: pip
     args: ["install", "--user", "-r", "requirements.txt"]
 
   - id: Install module (and test requirements)
-    name: python:3.11
+    name: python:${_VERSION}
     entrypoint: pip
     args: ["install", ".[test]", "--user"]
 
   - id: Run integration tests
-    name: python:3.11
+    name: python:${_VERSION}
     entrypoint: python
     args: ["-m", "pytest"]
     env:
@@ -33,6 +33,11 @@ steps:
       - "DB_NAME=$_DB_NAME"
       - "DB_USER=$_DB_USER"
       - "DB_PASSWORD=$_DB_PASSWORD"
+
+substitutions:
+  _VERSION: "3.8"
+
 options:
   pool:
     name: "projects/prow-build-graybox/locations/us-central1/workerPools/langchain-el-carro-wp"
+  dynamicSubstitutions: true
