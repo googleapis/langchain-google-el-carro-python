@@ -27,6 +27,11 @@ branchProtectionRules:
     requiredStatusCheckContexts:
       - "cla/google"
       - "lint"
+      - "integration-test-pr-py38 (prow-build-graybox)"
+      - "integration-test-pr-py39 (prow-build-graybox)"
+      - "integration-test-pr-py310 (prow-build-graybox)"
+      - "integration-test-pr-py311 (prow-build-graybox)"
+      - "integration-test-pr-py312 (prow-build-graybox)"
       - "conventionalcommits.org"
       - "header-check"
     # - Add required status checks like presubmit tests
