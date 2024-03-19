@@ -53,6 +53,10 @@ ignoredFiles:
   - "*.md"
 substitutions:
   _VERSION: "3.8"
+  _DB_HOST: <>
+  _DB_PORT: <>
+  _DB_NAME: <>
+  _DB_USER: <>
 ```
 
 Use `gcloud builds triggers import --source=trigger.yaml` create triggers via the command line
