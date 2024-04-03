@@ -141,11 +141,17 @@ def sample_table_2_varchar(elcarro_engine: ElCarroEngine) -> Generator:
 def custom_table(elcarro_engine: ElCarroEngine) -> Generator:
     random_suffix = "".join(random.choices(string.ascii_lowercase, k=6))
     table_name = f"doc_{random_suffix}"
-    elcarro_engine.drop_document_table(table_name)
+    try:
+        elcarro_engine.drop_document_table(table_name)
+    except sqlalchemy.exc.NoSuchTableError as e:
+        pass
 
     yield table_name
     # Teardown
-    elcarro_engine.drop_document_table(table_name)
+    try:
+        elcarro_engine.drop_document_table(table_name)
+    except sqlalchemy.exc.NoSuchTableError as e:
+        print(e)
 
 
 def test_load_from_sample_table_1(elcarro_engine: ElCarroEngine, sample_table_1: str):
