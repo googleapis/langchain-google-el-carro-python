@@ -14,17 +14,17 @@
 
 steps:
   - id: Install dependencies
-    name: python:${_VERSION}
+    name: python:3.11
     entrypoint: pip
     args: ["install", "--user", "-r", "requirements.txt"]
 
   - id: Install module (and test requirements)
-    name: python:${_VERSION}
+    name: python:3.11
     entrypoint: pip
     args: ["install", ".[test]", "--user"]
 
   - id: Run integration tests
-    name: python:${_VERSION}
+    name: python:3.11
     entrypoint: python
     args: ["-m", "pytest"]
     env:
