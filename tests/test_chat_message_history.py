@@ -53,12 +53,18 @@ def temporary_table(memory_engine: ElCarroEngine) -> Generator:
     """
     random_suffix = "".join(random.choices(string.ascii_lowercase, k=6))
     table_name = f"message_store_{random_suffix}"
-    memory_engine.drop_chat_history_table(table_name)
+    try:
+        memory_engine.drop_chat_history_table(table_name)
+    except sqlalchemy.exc.NoSuchTableError as e:
+        pass
 
     yield table_name
 
     # Cleanup
-    memory_engine.drop_chat_history_table(table_name)
+    try:
+        memory_engine.drop_chat_history_table(table_name)
+    except sqlalchemy.exc.NoSuchTableError as e:
+        print(e)
 
 
 def test_chat_message_history(
