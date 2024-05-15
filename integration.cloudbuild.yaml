@@ -26,7 +26,7 @@ steps:
   - id: Run integration tests
     name: python:${_VERSION}
     entrypoint: python
-    args: ["-m", "pytest", "--cov=langchain_google_cloud_sql_mysql", "--cov-config=.coveragerc", "tests/"]
+    args: ["-m", "pytest", "--cov=langchain_google_el_carro", "--cov-config=.coveragerc", "tests/"]
     env:
       - "DB_HOST=$_DB_HOST"
       - "DB_PORT=$_DB_PORT"
