@@ -1,4 +1,4 @@
 assign_issues:
-  - googleapis/langchain-el-carro
+  - googleapis/langchain-el-carro-team
 assign_prs:
-  - googleapis/langchain-el-carro
+  - googleapis/langchain-el-carro-team
