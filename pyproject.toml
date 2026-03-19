@@ -37,7 +37,7 @@ Changelog = "https://github.com/googleapis/langchain-google-el-carro-python/blob
 test = [
     "langchain>=0.1.8, <1.0.0",
     "pytest>=7.4.4",
-    "black[jupyter]==23.12.1",
+    "black[jupyter]==26.1.0",
     "isort==5.13.2",
     "mypy==1.9.0",
 ]
